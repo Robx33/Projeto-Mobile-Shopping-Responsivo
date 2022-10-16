@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;  /* Goblal padrão */
+    color: #5D5D7D;
+    font-weight: 400;
+}
+
+.wrapper {
+    height: 100vh;  /* Largura e altura todos os 100 pedacinhos da tela */
+    width: 100vw;
+
+}
+
+.container-left {
+    display: inline-block; /* Permite ficar um do lado do outro e alterar os conceitos */
+    width: 60%;     /* O lado esquerdo pega 60% da tela */
+    padding-left: 136px; /* O padding joga todo mundo da caixa mais pra esquerda */
+    margin-top: 3%;
+
+}
+
+.container-right {
+    display: inline-block;
+    background-color: rgba(93, 93, 125, 0.16);  /* Cores com o opacity no final */
+    height: 100vh;
+    width: 40%; /* O lado esquerdo pega 40% da tela */
+    position: absolute; /* Posiciona fixo o elemento e se mexer a tela ele mexe junto */
+    
+}
+
+img {
+    position: relative; /* Posicionou a imagem relativa ao lugar original dele */
+    top: 20%; /* 20% em relação ao topo */
+    right: 130px; /* Espaçamento em relação a direita */
+
+}   
+
+h1 {
+    width: 368px;       /* Altura da letra */
+    font-size: 70px;       /* Tamanhos da fonte, da letra */
+    line-height: 80px;
+    margin-top: 381px;   /* Espaçamento do topo */
+
+}
+
+p {
+    width: 540px;
+    font-size: 28px;
+    line-height: 48px;
+    opacity: 0.6;
+    margin: 15px 0; /* Baixo e em cima 15px e dos lados 0 */
+
+}
+
+button {
+    width: 269px;
+    height: 62px;
+    background: #9499EA;
+    box-shadow: 0px 10px 24px rgba(148, 153, 234, 0.0979959);
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {      /* Mouse passar em cima ativa o opacity */   
+    opacity: 0.8;
+}
+
+button:active {     /* Mouse clicado ativa o opacity */
+    opacity: 0.5;
+}
+
+a {
+    font-size: 28px;
+    line-height: 41px;   /* Tamanho da fonte, altura da linha, espaçamento da margem a direita */      
+    margin-right: 41px;
+    cursor: pointer;
+}
+
+a:nth-child(2) {    /* Deixou o segundo link com opacity */
+opacity: 0.4;
+
+}
+
+a:hover {
+    opacity: 0.4;   
+}
+
+a:active {
+    opacity: 0.8;
+}
+
+header {
+   margin: 24px 0 0 57px;   /*Espaçamento de 24px em cima, 0 do lado, 0 em baixo e 57px a esquerda */
+}
+
+@media screen and (max-width: 900px) {  /* Tornando responsivo para CELULAR */
+    .container-left {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-right {
+        display: block;
+        height: auto; /* Altura se adequa automaticamente */
+        width: 100%;
+        position: static; /* padrão */
+        padding: 40px;  /* Coloca um espaçamento de 40px na imagem */
+    }
+
+    img {
+        position: static;
+        max-width: 90%; /* o máximo da imagem é 90% */
+    }
+
+    header {
+        display: none; /* Removeu os links do cabeçario */
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 52px;      /* Tamanho do texto na versão do celular */
+        width: auto;
+        margin: 58px 50px 0 50px;
+        text-align: center;
+    }
+
+    p {
+        margin: 15px 40px;
+        width: auto;
+        text-align: center;     /* Tamanho do parágrafo na versão do celular */
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    button {
+        margin: 0 auto;     /* Em cima e baixo é 0 e do lado automático, alinha o botão no meio */
+        display: block;
+    
+    }
+
+    @media screen and (max-width: 385px) {  /* Aqui é um padrão para um celular menor ainda */
+        .container-left {
+            height: 70%;
+        }
+        
+    }
+
+}
